@@ -102,7 +102,10 @@ const validate = (formValues) => {
 };
 
 // 4- THIS GOES INTO <Formik /> `validationSchema` prop
-const validationSchema = null;
+const validationSchema = yup.object().shape({
+  name: yup.string().required('GAGAHHH WE NEED NAME'),
+  age: yup.number().required('NO JOY GIMME AGE'),
+});
 
 function FriendForm({ onSubmit }) {
   // Let's keep the FriendForm component
@@ -110,7 +113,8 @@ function FriendForm({ onSubmit }) {
   return (
     // needs 3 props
     <Formik
-      validate={validate}
+      validationSchema={validationSchema}
+      // validate={validate}
       initialValues={initialFriendForm}
       onSubmit={onSubmit}
       render={props => {
