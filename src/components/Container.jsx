@@ -103,8 +103,12 @@ const validate = (formValues) => {
 
 // 4- THIS GOES INTO <Formik /> `validationSchema` prop
 const validationSchema = yup.object().shape({
-  name: yup.string().required('GAGAHHH WE NEED NAME'),
-  age: yup.number().required('NO JOY GIMME AGE'),
+  name: yup.string()
+    .required('GAGAHHH WE NEED NAME'),
+  age: yup.number()
+    .required('NO JOY GIMME AGE')
+    .integer()
+    .positive('are you really trying to feed a negative number????'),
 });
 
 function FriendForm({ onSubmit }) {
@@ -114,7 +118,7 @@ function FriendForm({ onSubmit }) {
     // needs 3 props
     <Formik
       validationSchema={validationSchema}
-      // validate={validate}
+      validate={validate}
       initialValues={initialFriendForm}
       onSubmit={onSubmit}
       render={props => {
