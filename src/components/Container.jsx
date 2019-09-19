@@ -94,6 +94,7 @@ function FriendForm({ onSubmit }) {
   return (
     // needs 3 props
     <Formik
+      validate={validate}
       initialValues={initialFriendForm}
       onSubmit={onSubmit}
       render={props => {
@@ -105,12 +106,14 @@ function FriendForm({ onSubmit }) {
               <label>
                 Name
                 <Field name='name' type='text' placeholder='Name' />
+                <ErrorMessage name='name' component='div' />
               </label>
             </div>
             <div>
               <label>
                 Age
                 <Field name='age' type='text' placeholder='Age' />
+                <ErrorMessage name='age' component='div' />
               </label>
             </div>
             <button type='submit'>Submit</button>
