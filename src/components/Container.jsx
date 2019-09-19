@@ -12,7 +12,8 @@ const friendsApi = 'http://localhost:4000/friends';
 
 // 1- THIS GOES INTO <Formik /> `initialValues` prop
 const initialFriendForm = {
-
+  name: '',
+  age: '',
 };
 
 export default function Container() {
