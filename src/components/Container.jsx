@@ -99,10 +99,16 @@ function FriendForm({ onSubmit }) {
           // supplied by formik lib (like Formik)
           <Form>
             <div>
-              <Field name='name' type='text' placeholder='Name' />
+              <label>
+                Name
+                <Field name='name' type='text' placeholder='Name' />
+              </label>
             </div>
             <div>
-              <Field name='age' type='text' placeholder='Age' />
+              <label>
+                Age
+                <Field name='age' type='text' placeholder='Age' />
+              </label>
             </div>
             <button type='submit'>Submit</button>
           </Form>
