@@ -93,6 +93,9 @@ function FriendForm({ onSubmit }) {
     <Formik
       initialValues={initialFriendForm}
       onSubmit={onSubmit}
+      render={props => {
+        
+      }}
     />
   );
 }
