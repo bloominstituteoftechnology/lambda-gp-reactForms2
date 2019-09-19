@@ -34,13 +34,20 @@ export default function Container() {
   };
 
   // 2- THIS GOES INTO <Formik /> `onSubmit` prop
-  const addFriend = () => {
+  const addFriend = ({ name, age }) => {
     // THIS FUNCTION NEEDS TO COMPLY WITH FORMIK
     // REQUIREMENTS FOR ACCEPTABLE `onSubmit` FUNCTIONS!
     // It should take two args:
     //     (values) the form values (object)
     //     (actions) formik actions (object)
     // And perform a POST request to the api
+    axios.post(friendsApi, { name, age })
+      .then(res => {
+        debugger
+      })
+      .catch(err => {
+        debugger
+      });
   };
 
   useEffect(() => {
