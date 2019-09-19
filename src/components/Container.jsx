@@ -118,6 +118,9 @@ function FriendForm({ onSubmit }) {
           // we will use pre-baked components
           // supplied by formik lib (like Formik)
           <Form>
+            {
+              !props.dirty && <div>time to start typing!!</div>
+            }
             <div>
               <label>
                 Name
