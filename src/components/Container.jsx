@@ -92,6 +92,7 @@ function FriendForm({ onSubmit }) {
     // needs 3 props
     <Formik
       initialValues={initialFriendForm}
+      onSubmit={onSubmit}
     />
   );
 }
