@@ -94,7 +94,18 @@ function FriendForm({ onSubmit }) {
       initialValues={initialFriendForm}
       onSubmit={onSubmit}
       render={props => {
-        
+        return (
+          // we will use pre-baked components
+          // supplied by formik lib (like Formik)
+          <Form>
+            <div>
+              <Field name='name' type='text' placeholder='Name' />
+            </div>
+            <div>
+              <Field name='age' type='text' placeholder='Age' />
+            </div>
+          </Form>
+        );
       }}
     />
   );
