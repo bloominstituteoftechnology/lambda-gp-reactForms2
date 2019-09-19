@@ -89,6 +89,9 @@ function FriendForm({ onSubmit }) {
   // Let's keep the FriendForm component
   // nice and stateless.
   return (
-    <Formik />
+    // needs 3 props
+    <Formik
+      initialValues={initialFriendForm}
+    />
   );
 }
