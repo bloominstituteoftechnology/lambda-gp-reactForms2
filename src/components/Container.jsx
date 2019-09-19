@@ -86,6 +86,18 @@ const validate = (formValues) => {
   // take a look inside those forms values
   // and add errors if we don't like what we see
   // return the errors object
+
+  // investigating the formValues.name
+  if (!formValues.name) {
+    errors.name = 'You need to supply a name, dummy!';
+  } else if (formValues.name.length < 3) {
+    errors.name = 'That name looks a little short';
+  }
+
+  // investigating the formValues.age
+  if (!formValues.age) {
+    errors.age = 'We need an age!!';
+  }
   return errors;
 };
 
