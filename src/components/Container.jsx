@@ -104,6 +104,7 @@ function FriendForm({ onSubmit }) {
             <div>
               <Field name='age' type='text' placeholder='Age' />
             </div>
+            <button type='submit'>Submit</button>
           </Form>
         );
       }}
