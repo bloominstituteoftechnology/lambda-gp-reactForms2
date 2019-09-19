@@ -81,8 +81,12 @@ export default function Container() {
 }
 
 // 3- THIS GOES INTO <Formik /> `validate` prop
-const validate = () => {
-
+const validate = (formValues) => {
+  const errors = {};
+  // take a look inside those forms values
+  // and add errors if we don't like what we see
+  // return the errors object
+  return errors;
 };
 
 // 4- THIS GOES INTO <Formik /> `validationSchema` prop
