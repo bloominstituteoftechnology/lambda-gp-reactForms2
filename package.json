@@ -5,8 +5,7 @@
   "scripts": {
     "react": "live-server",
     "api": "node friendsServer.js",
-    "webpack": "webpack --watch",
-    "test": "jest --watchAll"
+    "webpack": "webpack --watch"
   },
   "keywords": [],
   "author": "",
