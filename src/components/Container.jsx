@@ -35,6 +35,7 @@ export default function Container() {
 
   // 2- THIS GOES INTO <Formik /> `onSubmit` prop
   const addFriend = (formValues) => {
+    debugger
     // THIS FUNCTION NEEDS TO COMPLY WITH FORMIK
     // REQUIREMENTS FOR ACCEPTABLE `onSubmit` FUNCTIONS!
     // It should take two args:
