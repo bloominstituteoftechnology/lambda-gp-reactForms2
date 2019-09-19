@@ -21,10 +21,16 @@ export default function Container() {
   const [serverError, setServerError] = useState('');
 
   const fetchFriends = () => {
-    // here
     // get those friends from the api
     // and set them into the right slice of state!
     // don't forget about the sad path: put something in `serverError`
+    axios.get(friendsApi)
+      .then(res => {
+        setFriendsList(res.data);
+      })
+      .catch(err => {
+        setServerError(err.message);
+      });
   };
 
   // 2- THIS GOES INTO <Formik /> `onSubmit` prop
