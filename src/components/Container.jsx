@@ -35,7 +35,6 @@ export default function Container() {
 
   // 2- THIS GOES INTO <Formik /> `onSubmit` prop
   const addFriend = (formValues) => {
-    debugger
     // THIS FUNCTION NEEDS TO COMPLY WITH FORMIK
     // REQUIREMENTS FOR ACCEPTABLE `onSubmit` FUNCTIONS!
     // It should take two args:
@@ -48,7 +47,9 @@ export default function Container() {
     };
     axios.post(friendsApi, friendToPost)
       .then(res => {
-        debugger
+        // res.data contains the newly created friend
+        const newLyCreatedFriendFromServer = res.data;
+        setFriendsList(friendsList.concat(newLyCreatedFriendFromServer));
       })
       .catch(err => {
         debugger
